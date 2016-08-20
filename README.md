@@ -12,11 +12,11 @@
 
 `./gradlew bootRun`
 
-Now server is running on `http://localhost:8080/` !
+Now server is running on http://localhost:8080/ !
 
 ## Available endpoints:
 
-- CRUD on /students
-- /me - user information - automatic redirection to facebook page
+- CRUD on `/students`
+- `/me` - user information - automatic redirection to facebook page
 
-Api swagger documentation available on `http://localhost:8080/swagger-ui.html`
+Api swagger documentation available on http://localhost:8080/swagger-ui.html
