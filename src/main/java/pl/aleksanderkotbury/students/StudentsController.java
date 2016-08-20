@@ -40,4 +40,9 @@ public class StudentsController {
         Student updatedStudent = StudentBuilder.fromStudent(student).withId(id).build();
         return studentRepository.save(updatedStudent);
     }
+
+    @GetMapping("/students/search/findByFirstName")
+    public Page<Student> findStudentsByFirstName(@RequestParam("firstName") String firstName, Pageable pageable) {
+        return studentRepository.findByFirstName(firstName, pageable);
+    }
 }
