@@ -5,6 +5,7 @@
 - spring-data with mongodb
 - spring-security - oauth2 facebook login
 - springfox swagger documentation
+- RestAssured for integration tests
 
 ## Requirements: only JDK8
 
