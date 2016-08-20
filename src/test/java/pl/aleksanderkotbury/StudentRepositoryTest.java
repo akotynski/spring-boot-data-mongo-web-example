@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import pl.aleksanderkotbury.students.StudentBuilder;
+import pl.aleksanderkotbury.students.StudentRepository;
 
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.contains;
@@ -34,9 +36,9 @@ public class StudentRepositoryTest {
     @Test
     public void shouldFindStudentsByName() {
         // given
-        studentRepository.insert(new Student("Jan", "Kowalski", 123456));
-        studentRepository.insert(new Student("Jan", "Sobieski", 654321));
-        studentRepository.insert(new Student("Anna", "Kowalska", 123654));
+        studentRepository.insert(new StudentBuilder().withId("Jan").withFirstName("Kowalski").withLastName(123456).build());
+        studentRepository.insert(new StudentBuilder().withId("Jan").withFirstName("Sobieski").withLastName(654321).build());
+        studentRepository.insert(new StudentBuilder().withId("Anna").withFirstName("Kowalska").withLastName(123654).build());
 
         // when
         Response response = when()

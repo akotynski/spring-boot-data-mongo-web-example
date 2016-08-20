@@ -1,4 +1,4 @@
-package pl.aleksanderkotbury;
+package pl.aleksanderkotbury.students;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,9 +14,11 @@ public class Student {
     private Integer indexNumber;
 
     @JsonCreator
-    public Student(@JsonProperty("firstName") String firstName,
+    public Student(@JsonProperty("id") String id,
+                   @JsonProperty("firstName") String firstName,
                    @JsonProperty("lastName") String lastName,
                    @JsonProperty("indexNumber") Integer indexNumber) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.indexNumber = indexNumber;
