@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/akotynski/spring-boot-data-mongo-web-example.svg?branch=master)](https://travis-ci.org/akotynski/spring-boot-data-mongo-web-example)
+
 # Example spring-boot project.
 
 ## Used components:
